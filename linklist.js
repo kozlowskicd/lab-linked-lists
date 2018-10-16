@@ -27,14 +27,15 @@ class LinkedList {
     return this;
   }
   prepend(value) {
-      let node = new Node(value);
-      this.head = node;
-      let currentNode = this.head;
-      
-      while(currentNode.next)  {
-        
+    let newNode = new Node(value);
+    this.head = newNode;
+    let currentNode = this.head;
+    while(currentNode.next) {
+      if this.head !== newNode) {
+        this.head = null;
       }
-  }
+      newNode.next = node; 
+    }
 }
 
 module.exports = LinkedList;
