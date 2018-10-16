@@ -1,0 +1,24 @@
+{
+  "name": "lab-linked-lists",
+  "version": "1.0.0",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) Linked List Data Structure ================================================================",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "lint": "eslint **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kozlowskicd/lab-linked-lists.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kozlowskicd/lab-linked-lists/issues"
+  },
+  "homepage": "https://github.com/kozlowskicd/lab-linked-lists#readme",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
