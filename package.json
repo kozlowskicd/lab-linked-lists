@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/kozlowskicd/lab-linked-lists#readme",
   "dependencies": {
+    "eslint": "^5.7.0",
     "jest": "^23.6.0"
   }
 }
