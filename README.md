@@ -1,32 +1,38 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Linked List Data Structure
-================================================================
+[![Build Status](https://travis-ci.com/kozlowskicd/lab-linked-lists.svg?branch=master)](https://travis-ci.com/kozlowskicd/lab-linked-lists)
+# Linked List
+This repo is a self-implementation of Linked Lists and their associated methods.
 
-## Submission Instructions
-* Follow the data structures submission instructions
+## Singly Linked List (SLL) 
+This type of data stucture begins with a head node that contains a value and a next property.  Each node in the list contains a value and a pointer to the next node.  The last node points to null, marking the end of the list.
+### Implemented methods
+- ##### append(value)
+        Takes in a value and adds it to the end of the list.
+- ##### prepend(value)
+       Takes in a value and adds it to the front of the list.  This new node will be the new head and it's next will point to the old one.
+- ##### reverse()
+        Reverses the position of every node.
+- ##### remove(offset)
+        Moves forward (offset) places and removes that node from the list.
+- ##### serialize()
+        Creates an array with the properties of each node object in each position of the array.
+- ##### getMiddle()
+      Searches for the node in the middle of the list and returns it.  Does not delete the node.  Rounds up if there is an odd number of nodes in the list.
+- ##### getKthFromEnd(number)
+        Moves backwards (number) from the end and returns the node.  Does nodt delete the node.  0 returns the last node in the list.
 
-### Before you begin
-* You'll need to initialize the implementation folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
+## Doubly Linked List (DLL)
+This operates identically as a SLL, except in this each node includes a property pointing to the previous node in the list in addition to the value and next properties.
+### Implemented methods
+- ##### append(value)
+        Takes in a value and adds it to the end of the list.
+- ##### prepend(value)
+       Takes in a value and adds it to the front of the list.  This new node will be the new head and it's next will point to the old one.
+- ##### reverse()
+        Reverses the position of every node.
+- ##### remove(offset)
+        Moves forward (offset) places and removes that node from the list.
+- ##### serialize()
+        Creates an array with the properties of each node object in each position of the array.
 
-
-## Requirements
-* implement a Singly Linked List (SLL) data structure
-* implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL class
-* implement `serialize()` and `deserialize()` methods on the class
-* in a comment within each function, note the it's Big-O runtime
-
-* implement a Doubly Linked List (DLL) data structure
-* implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL class
-* implement `serialize()` and `deserialize()` methods on the class
-* in a comment within each function, note the it's Big-O runtime
-
-#### Testing
-  * write at least three test assertions for each method of the Linked List Data Structure
-  * organize your tests into appropriate describe/it blocks for test output readability
-
-####  Documentation
-  * in your README, write documentation for you data structures
-  * your documentation should includes code block useage examples
-  * provide instructions for:
-    * installing and using your data structure
-    * accessing each method
-    * running your tests
+## Deserialize(array)
+Both types of lists have access to an externalized deserialize funtion.  This function takes in an array created by either lists' .serialize() function, and returns a new list created from the array.
